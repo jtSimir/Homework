@@ -15,18 +15,19 @@ let i = attemptNumber;
 let color;
 let result;
 
-color = prompt(`Какой цвет выбран ? (Осталось попыток ${i})`);
-
-while (i > 1 && expectedColor !== color){
-   --i;
-   alert("Вы не угодали") 
-   color = prompt(`Какой цвет выбран ? (Осталось попыток ${i})`);    
+while (i > 0){
+   
+   color = prompt(`Какой цвет выбран ? (Осталось попыток ${i})`);   
+   
+   if (expectedColor == color) {
+      alert("Вы угодали");
+      break
+   } else {
+      alert("Вы не угодали") 
+      --i;
+   }
 }
 
-if (i > 1 ) {
-   result = "Вы угодали";
-} else {
-   result = "Попытки закончились вы не угодали";
+if (i == 0 ) {
+   alert("Попытки закончились вы не угодали");
 }
-
-alert(result)
