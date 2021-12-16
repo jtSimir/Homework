@@ -14,7 +14,9 @@ var arr2 = [];
 
 for (let i = 0; i < files.length; i++){
    arr1 = files[i].split('.');
-      if (arr1.lastIndexOf('pdf') === 1){
+      if (arr1.lastIndexOf('pdf') === arr1.length-1){
          arr2.push(files[i])
       }
 }
+
+console.log(arr2)
