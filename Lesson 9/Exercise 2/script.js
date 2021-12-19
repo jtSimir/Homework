@@ -5,7 +5,7 @@ function factorial(n) {
       return n = 1
    } else if (n < 0){
       return NaN
-   }   else {   
+   } else {   
       if (n == 1) {
          return n;
       } else {
