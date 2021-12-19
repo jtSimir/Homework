@@ -5,6 +5,7 @@ const user = [{name: "Ivan", age: 18},
                {name: "Sidor", age: 25},
                {name: "Pavel", age: 16},
                {name: "Sasha", age: 29}]
+               
 
 user.sort(function(a, b){
    if (a.age > b.age){
@@ -15,5 +16,9 @@ user.sort(function(a, b){
 })
 
 let sumYoung = user.reduce(function(start, element) {
-   return start + element.age
-})
+   if (element.age < 18){
+       return start + element.age
+   }   else {
+      return start
+   }
+}, 0)
